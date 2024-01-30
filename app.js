@@ -5,6 +5,7 @@ const msg=document.getElementById("msg");
 const msgCon = document.querySelector(".msg-con");
 const newGameBtn=document.getElementById("new");
 const ResetGameBtn=document.getElementById("res");
+const icon = document.getElementById("image")
 const winptn=[
 [0,1,2],
 [0,3,6],
@@ -73,3 +74,25 @@ function resetGame(){
 
 newGameBtn.addEventListener("click", resetGame);
 ResetGameBtn.addEventListener("click", resetGame);
+var islight = true;
+icon.addEventListener('click',()=>{
+    const bod = document.body
+    let boxes=document.getElementsByClassName("box");
+    if(islight){
+        bod.style.backgroundColor = "#142020"
+        bod.style.color = "#ffffff"
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor = "#474747";
+        }
+        icon.src = "dark-mode.png"
+        islight = false;
+    }else{
+        bod.style.backgroundColor = "#548687"
+        bod.style.color = "black"
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].style.backgroundColor = "#ffffc7";
+        }
+        icon.src = "light-mode.png"
+        islight = true;
+    }
+})
