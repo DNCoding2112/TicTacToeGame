@@ -1,11 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Anuphan:700|Anuphan:400');
+
 *{
     margin:0;
     padding:0;
+    font-family: 'Anuphan';
+    font-weight: 700;
 }
-
 body{
     background-color: #548687;
     text-align:center;
+}
+header{
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+img{
+    width: 12%;
+    margin-right: 1em;
+}
+#icon{
+    margin-left: 5em;
+    display: flex;
+    justify-content: flex-end;
+}
+h1{
+    margin-right: 1em;
+    font-size: 3rem;
 }
 
 .container{
@@ -39,7 +60,7 @@ body{
 .reset-btn{
     padding:1rem;
     font-size:1.25rem;
-    background-color: #191913;
+    background-color: #474747;
     color:#fff;
     border-radius: 1rem 1rem 1.25rem 1.25rem;
     border:none;
@@ -68,4 +89,3 @@ body{
 .hide{
     display:none;
 }
-
